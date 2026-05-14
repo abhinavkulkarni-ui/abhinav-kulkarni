@@ -46,7 +46,7 @@
             will-change: transform;
         }
 
-        /* Ambient Glows to replace expensive Bloom Pass */
+        /* Ambient Glows */
         .glow-1, .glow-2 { position: fixed; border-radius: 50%; filter: blur(150px); z-index: 0; opacity: 0.2; pointer-events: none; }
         .glow-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: var(--purple); }
         .glow-2 { bottom: -10%; right: -10%; width: 400px; height: 400px; background: var(--cyan); }
@@ -86,6 +86,7 @@
         .hero-text p { color: var(--text-muted); font-size: 18px; line-height: 1.7; margin-bottom: 40px; max-width: 500px; }
         
         .hero-img { position: relative; width: 400px; height: 400px; transform-style: preserve-3d; pointer-events: auto; }
+        /* Removed onerror from photo to prevent hanging */
         .hero-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 30px; border: 1px solid rgba(255,255,255,0.1); z-index: 2; position: relative; transform: translateZ(20px); box-shadow: 0 20px 50px rgba(0,0,0,0.8); }
         .hero-img::before { content: ''; position: absolute; inset: -10px; background: var(--gradient-1); border-radius: 40px; z-index: 1; filter: blur(30px); opacity: 0.5; animation: pulse 3s infinite alternate; transform: translateZ(0px); }
         @keyframes pulse { 0% { opacity: 0.3; } 100% { opacity: 0.7; } }
@@ -129,7 +130,7 @@
         }
         .cert-inner { transform: translateZ(15px); display: flex; flex-direction: column; height: 100%; border-radius: 16px; overflow: hidden; }
         .cert-card:hover { border-color: var(--purple); box-shadow: 0 15px 30px rgba(139, 92, 246, 0.4); }
-        .cert-img { width: 100%; height: 190px; object-fit: cover; border-bottom: 1px solid var(--border-color); background: #1a1a1a; }
+        .cert-img { width: 100%; height: 190px; object-fit: cover; border-bottom: 1px solid var(--border-color); background: #1a1a1a; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 12px;}
         .cert-info { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; background: rgba(0,0,0,0.5); }
         .cert-info h4 { font-size: 17px; margin-bottom: 8px; color: var(--text-main); line-height: 1.3; font-weight: 600; }
         .cert-info p { font-size: 13.5px; color: var(--text-muted); line-height: 1.5; }
@@ -184,7 +185,7 @@
                 <p>I engineer dark-themed, highly interactive digital experiences. Fusing UI/UX empathy with clean frontend architecture to build the web of tomorrow.</p>
             </div>
             <div class="hero-img" data-aos="zoom-in" data-tilt data-tilt-max="5" data-tilt-speed="600" data-tilt-glare data-tilt-max-glare="0.1">
-                <img src="PHOTO.png" alt="Abhinav Kulkarni" onerror="this.src='https://via.placeholder.com/400x400/0a0a0a/06b6d4?text=Photo'">
+                <img src="PHOTO.png" alt="Abhinav Kulkarni">
             </div>
         </section>
 
@@ -258,7 +259,7 @@
                 
                 <div class="cert-card" data-tilt data-tilt-max="4" data-tilt-speed="600">
                     <div class="cert-inner">
-                        <img src="cert11.png" alt="TCS iON" class="cert-img" onerror="this.src='https://via.placeholder.com/400x200/0a0a0a/06b6d4?text=TCS+iON'">
+                        <img src="cert11.png" alt="TCS iON" class="cert-img">
                         <div class="cert-info">
                             <h4>Career Edge - Young Professional</h4>
                             <p>Completed intensive training covering IT Fundamentals, AI Overviews, Communication, and Soft Skills.</p>
@@ -269,7 +270,7 @@
 
                 <div class="cert-card" data-tilt data-tilt-max="4" data-tilt-speed="600">
                     <div class="cert-inner">
-                        <img src="cert12.png" alt="IBM AI" class="cert-img" onerror="this.src='https://via.placeholder.com/400x200/0a0a0a/06b6d4?text=IBM+SkillsBuild'">
+                        <img src="cert12.png" alt="IBM AI" class="cert-img">
                         <div class="cert-info">
                             <h4>Artificial Intelligence Fundamentals</h4>
                             <p>Successfully satisfied the requirements to achieve professional excellence in Artificial Intelligence fundamentals.</p>
@@ -280,7 +281,7 @@
 
                 <div class="cert-card" data-tilt data-tilt-max="4" data-tilt-speed="600">
                     <div class="cert-inner">
-                        <img src="cert13.png" alt="Microsoft Power BI" class="cert-img" onerror="this.src='https://via.placeholder.com/400x200/0a0a0a/06b6d4?text=Microsoft+Power+BI'">
+                        <img src="cert13.png" alt="Microsoft Power BI" class="cert-img">
                         <div class="cert-info">
                             <h4>Get Data in Power BI</h4>
                             <p>Successfully completed advanced data gathering, structuring, and visualization techniques in Microsoft Power BI.</p>
@@ -291,7 +292,7 @@
 
                 <div class="cert-card" data-tilt data-tilt-max="4" data-tilt-speed="600">
                     <div class="cert-inner">
-                        <img src="cert14.png" alt="Microsoft Fabric" class="cert-img" onerror="this.src='https://via.placeholder.com/400x200/0a0a0a/06b6d4?text=Microsoft+Fabric'">
+                        <img src="cert14.png" alt="Microsoft Fabric" class="cert-img">
                         <div class="cert-info">
                             <h4>End-to-End Analytics using Fabric</h4>
                             <p>Mastered introduction concepts to end-to-end cloud analytics architectures using Microsoft Fabric.</p>
@@ -302,7 +303,7 @@
 
                 <div class="cert-card" data-tilt data-tilt-max="4" data-tilt-speed="600">
                     <div class="cert-inner">
-                        <img src="cert3.png" alt="HTML" class="cert-img" onerror="this.src='https://via.placeholder.com/400x200/0a0a0a/06b6d4?text=HTML5'">
+                        <img src="cert3.png" alt="HTML" class="cert-img">
                         <div class="cert-info">
                             <h4>HTML Web Development</h4>
                             <p>Mastered core web structural technologies, semantic HTML5 tags, and modern frontend document layouts.</p>
@@ -313,7 +314,7 @@
 
                 <div class="cert-card" data-tilt data-tilt-max="4" data-tilt-speed="600">
                     <div class="cert-inner">
-                        <img src="cert4.png" alt="Python" class="cert-img" onerror="this.src='https://via.placeholder.com/400x200/0a0a0a/06b6d4?text=Python'">
+                        <img src="cert4.png" alt="Python" class="cert-img">
                         <div class="cert-info">
                             <h4>Python Programming</h4>
                             <p>Certified in Python logic, data structures, algorithms, and basic level scripting paradigms.</p>
@@ -324,7 +325,7 @@
 
                 <div class="cert-card" data-tilt data-tilt-max="4" data-tilt-speed="600">
                     <div class="cert-inner">
-                        <img src="cert5.png" alt="Gen AI" class="cert-img" onerror="this.src='https://via.placeholder.com/400x200/0a0a0a/06b6d4?text=Generative+AI'">
+                        <img src="cert5.png" alt="Gen AI" class="cert-img">
                         <div class="cert-info">
                             <h4>Build Generative AI Model</h4>
                             <p>Completed intensive training on foundational AI architecture. Successfully built and fine-tuned a model.</p>
@@ -335,7 +336,7 @@
                 
                 <div class="cert-card" data-tilt data-tilt-max="4" data-tilt-speed="600">
                     <div class="cert-inner">
-                        <img src="cert2.png" alt="WeDidIt" class="cert-img" onerror="this.src='https://via.placeholder.com/400x200/0a0a0a/06b6d4?text=WeDidIt'">
+                        <img src="cert2.png" alt="WeDidIt" class="cert-img">
                         <div class="cert-info">
                             <h4>WeDidIt Certification</h4>
                             <p>Recognized for outstanding participation and receive offer for completion of program requirements.</p>
@@ -350,7 +351,7 @@
 
                 <div class="cert-card" data-tilt data-tilt-max="4" data-tilt-speed="600">
                     <div class="cert-inner">
-                        <img src="buildforbharatMit.jpeg" alt="Build for Bharat" class="cert-img" onerror="this.src='https://via.placeholder.com/400x200/0a0a0a/06b6d4?text=Build+For+Bharat'">
+                        <img src="cert10.png" alt="Build for Bharat" class="cert-img">
                         <div class="cert-info">
                             <h4>Build For Bharat 2026</h4>
                             <p>Participated in the intensive National Innovation Hackathon organized by MIT Emerging Science & Tech Dept.</p>
@@ -361,7 +362,7 @@
 
                 <div class="cert-card" data-tilt data-tilt-max="4" data-tilt-speed="600">
                     <div class="cert-inner">
-                        <img src="cert9.png" alt="Design X UI/UX" class="cert-img" onerror="this.src='https://via.placeholder.com/400x200/0a0a0a/06b6d4?text=Design+X+UI/UX'">
+                        <img src="cert9.png" alt="Design X UI/UX" class="cert-img">
                         <div class="cert-info">
                             <h4>Design-X-Participation</h4>
                             <p>Thrilled to participate in DESIGNX UI/UX Competition by Technofilia 2026 National Tech Event.</p>
@@ -372,7 +373,7 @@
                 
                 <div class="cert-card" data-tilt data-tilt-max="4" data-tilt-speed="600">
                     <div class="cert-inner">
-                        <img src="cert7.png" alt="Nextwave" class="cert-img" onerror="this.src='https://via.placeholder.com/400x200/0a0a0a/06b6d4?text=Nextwave'">
+                        <img src="cert7.png" alt="Nextwave" class="cert-img">
                         <div class="cert-info">
                             <h4>Generative AI-Participation</h4>
                             <p>Actively participated in Course AI model built, expanding knowledge in modern software pipelines.</p>
@@ -383,7 +384,7 @@
 
                 <div class="cert-card" data-tilt data-tilt-max="4" data-tilt-speed="600">
                     <div class="cert-inner">
-                        <img src="cert1.png" alt="InAmigos" class="cert-img" onerror="this.src='https://via.placeholder.com/400x200/0a0a0a/06b6d4?text=InAmigos'">
+                        <img src="cert1.png" alt="InAmigos" class="cert-img">
                         <div class="cert-info">
                             <h4>Content Writing & UI/UX Internship</h4>
                             <p>Successfully completed a remote internship focusing on digital content strategy, layout design, and user engagement.</p>
@@ -394,7 +395,7 @@
 
                 <div class="cert-card" data-tilt data-tilt-max="4" data-tilt-speed="600">
                     <div class="cert-inner">
-                        <img src="cert8.png" alt="Hackathon" class="cert-img" onerror="this.src='https://via.placeholder.com/400x200/0a0a0a/06b6d4?text=MIT+Poster'">
+                        <img src="cert8.png" alt="Hackathon" class="cert-img">
                         <div class="cert-info">
                             <h4>Poster Presentation (MIT)</h4>
                             <p>Active participant in an institute level Poster presentation For Engineering Exploration.</p>
@@ -445,8 +446,8 @@
         import * as THREE from 'three';
         import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-        // Stripped out all post-processing for maximum FPS
-        const config = { paused: false, activePaletteIndex: 0, currentFormation: 0, numFormations: 3, densityFactor: 0.5 };
+        // MASSIVELY REDUCED DENSITY FOR SPEED
+        const config = { paused: false, activePaletteIndex: 0, currentFormation: 0, numFormations: 3, densityFactor: 0.35 };
         const colorPalettes = [ [ new THREE.Color(0x667eea), new THREE.Color(0x764ba2), new THREE.Color(0xf093fb), new THREE.Color(0x9d50bb), new THREE.Color(0x6e48aa) ] ];
 
         const scene = new THREE.Scene();
@@ -459,12 +460,12 @@
         const renderer = new THREE.WebGLRenderer({ canvas: canvasElement, antialias: false, powerPreference: "high-performance", alpha: true });
         
         renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(1); // Keep at 1 for absolute smoothness
-        renderer.setClearColor(0x050505, 0); // Transparent background
+        renderer.setPixelRatio(1); 
+        renderer.setClearColor(0x050505, 0); 
         
         // Lightweight Starfield
         function createStarfield() {
-            const count = 1000; 
+            const count = 500; 
             const positions = [], colors = [], sizes = [];
             for (let i = 0; i < count; i++) {
                 const r = THREE.MathUtils.randFloat(50, 150);
@@ -599,7 +600,6 @@
                     float camDistance = length(vPosition - cameraPosition); float distanceFade = smoothstep(100.0, 15.0, camDistance);
                     if (vNodeType > 0.5) { finalColor *= 1.1; alpha *= 0.9; }
                     finalColor *= (1.0 + vGlow * 0.1);
-                    // Boosted color multiplier to replace bloom
                     gl_FragColor = vec4(finalColor * 2.5, alpha * distanceFade);
                 }`
         };
@@ -646,7 +646,6 @@
                     float baseAlpha = 0.7 * vConnectionStrength; float flowAlpha = combinedFlow * 0.3;
                     float alpha = baseAlpha + flowAlpha; alpha = mix(alpha, min(1.0, alpha * 2.5), vPulseIntensity);
                     float distanceFade = smoothstep(100.0, 15.0, vDistanceFromCamera);
-                    // Boosted color multiplier to replace bloom
                     gl_FragColor = vec4(finalColor * 2.0, alpha * distanceFade);
                 }`
         };
@@ -833,7 +832,7 @@
             }
             starField.rotation.y += 0.0002; starField.material.uniforms.uTime.value = t;
             controls.update(); 
-            renderer.render(scene, camera); // Fast, native rendering
+            renderer.render(scene, camera); 
         }
 
         function init() {
